@@ -1,0 +1,443 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule on your HTML elements as you start to fill them with content*/
+
+.boxColor {
+    color: #fff;
+    background: #000;
+    text-align: center;
+    margin: 0;
+}
+
+/*basic reset*/
+
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav { 
+    margin: 0; 
+    padding: 0; 
+}   
+
+img { 
+    border: none; /*Remove border if image is a link*/
+    margin: 0; 
+    padding: 0; 
+}
+
+/*html selectors*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #333;
+}
+
+/* Remove underlines from links */
+
+a {
+    text-decoration: none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden {
+    display: none;
+}
+
+
+/*Common page elements  */
+
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#container {
+    margin: 0 auto;
+    width: 920px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    /* this is our grid based off of our photoshop file */
+    display: grid;
+    grid-template-columns: repeat(10, 74px);
+    grid-column-gap: 20px;
+    grid-row-gap: 80px;
+}
+
+#mainHeader {
+    /* makes the grid ignore this element */
+    display: contents;
+}
+
+#logo {
+    grid-column: 1/3;
+    /* Remove as content will dictate height */
+    height: 100px;
+}
+
+#mainNav {
+    grid-column: 5/11;
+    /* Remove as content will dictate height */
+    height: 100px;
+}
+
+main {
+    /* makes the grid ignore this element */
+    display: contents;
+}
+
+#mainFooter {
+    /* makes the grid ignore this element */
+    display: contents;
+}
+
+#footerNav {
+    grid-column: 1/6;
+    /* Remove as content will dictate height */
+    height: 100px;
+}
+
+#copyRight{
+    grid-column: 8/11;
+    /* Remove as content will dictate height */
+    height: 100px;
+}
+
+/* Unique Page Elements */
+
+/* page 1 */
+
+#heroImage {
+    grid-column: 1/7;
+    /* Remove as content will dictate height */
+    height: 250px;
+}
+
+#heroText {
+    grid-column: 8/11;
+    /* Remove as content will dictate height */
+    height: 250px;
+}
+
+#product1 {
+    grid-column: 1/4;
+    /* Remove as content will dictate height */
+    height: 300px;
+}
+
+#product2 {
+    grid-column: 4/8;
+    /* Remove as content will dictate height */
+    height: 300px;
+}
+
+#product3 {
+    grid-column: 8/11;
+    /* Remove as content will dictate height */
+    height: 300px;
+}
+
+
+
+/* page 2 */
+
+#contactLeft {
+    grid-column: 1/6;
+    /* Remove as content will dictate height */
+    height: 300px;
+}
+
+#contactRight {
+    grid-column: 6/11;
+    /* Remove as content will dictate height */
+    height: 300px;
+}
+
+
+/* page 3 */
+
+#service1 {
+    grid-column: 1/4;
+    padding-right: 80px;
+    /* Remove as content will dictate height */
+    
+}
+
+#service2 {
+    grid-column: 4/8;
+    margin-left: 50px;
+    /* Remove as content will dictate height */
+    
+}
+
+#service3 {
+    grid-column: 8/12;
+    /* Remove as content will dictate height */
+    
+}
+
+#banner {
+    grid-column: 1/11;
+    /* Remove as content will dictate height */
+    height: 300px;
+}
+
+
+/* page 4 */
+
+#heroFull {
+    grid-column: 1/11;
+    /* Remove as content will dictate height */
+    height: 250px;
+}
+
+#specialOfferLeft {
+    grid-column: 1/6;
+    /* Remove as content will dictate height */
+    height: 300px;
+}
+
+#specialOfferRight {
+    grid-column: 6/11;
+    /* Remove as content will dictate height */
+    height: 300px;
+}
+
+
+
+/* newe codes heer  */
+
+/* header section  */
+.mainHeader{
+    width: 101%;
+    height: 150px;
+    background-color: #F2E9E4;
+    padding: 10px;
+}
+
+#logo{
+    font-size: 24px;
+    display: flex;
+}
+
+#mainNav ul{
+    display: flex;
+    list-style: none;
+}
+ .Menu ul li{
+    padding: 110px 10px 0px 10px ;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.socialLink ul{
+    float: right;
+}
+.socialLink ul li{
+    padding: 0px 5px 0px 5px ;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* main section  */
+.heroSec{
+    height: auto;
+    width: 103%;
+}
+
+#heroText{
+    text-align: center;
+    flex-direction: column;
+    padding: 0px 20px;
+
+}
+
+#heroText h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+#heroText p{
+    font-size: 18px;
+}
+/* main section  */
+
+/* product section  */
+.productSec{
+    height: auto;
+    width: 100%;
+    background-color: #050423;
+    padding: 80px 15px;
+    
+}
+
+.productSec img{
+    height: 180px;
+    width: 95%;
+}
+
+.productButton{
+    padding: 10px 20px;
+    width: 95%;
+    background-color: #171635;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* footer section  */
+
+
+.mainFooter{
+    width: 101%;
+    height: 150px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+#Footerlogo{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainNav ul{
+    display: flex;
+    list-style: none;
+}
+.mainFooter ul{
+    display: flex;
+    list-style: none;
+}
+.mainFooter .Menu ul li{
+    padding: 40px 10px 0px 10px ;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.socialLink ul{
+    float: right;
+}
+.socialLink ul li{
+    padding: 0px 5px 0px 5px ;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+/* second page  */
+
+.SecondproductSec{
+    height: auto;
+    width: 91%;
+    background-color: #050423;
+    padding: 80px 15px;
+
+}
+#secondProduct1, #secondProduct2{
+    width: 400px;
+    height: 320px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#secondProduct2 p, #secondProduct1 p{
+    padding: 8px 0px;
+
+}
+
+
+
+#secondProduct1 .productButton, #secondProduct2 .productButton{
+    background-color: #000;
+    color: #fff;
+    width: 70%;
+    padding: 20px 15px;
+}
+
+
+
+
+/* third page  */
+
+
+
+#ThirdProduct1, #ThirdProduct2{
+    width: 280px;
+    height: 320px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* contact page  */
+#offerSection{
+    height: auto;
+    width: 100%;
+    padding: 50px 0px;
+}
+
+#specialOfferRight{
+    background-color: #050423;
+    color: #fff;
+    height: 850px;
+    text-align: center;
+    
+}
+
+#specialOfferRight h1{
+    font-size: 2.5rem;
+}
+#specialOfferRight p{
+    font-size: 1.5rem;
+    padding: 50px 50px;
+}
+
+#specialOfferLeft{
+    padding: 0px 10px;
+    height: 800px;
+}
+#specialOfferLeft h2{
+    font-size: 20px ;
+    font-weight: bold;
+    padding: 10px 0;
+}
+#specialOfferLeft p{
+    padding: 10px 0;
+}
+#specialOfferLeft label{
+    padding: 100px 0;
+}
+
+
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: rgb(141, 141, 141);
+    color: white;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+
+
